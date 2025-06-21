@@ -46,8 +46,8 @@ bool sudoku::solution_logic(vector<vector<int>> &box) {
 }
 
 void sudoku::soln_Board(vector<vector<int>> &box) {
-    solution_logic(box);
-    if(!solution_logic(box)) { 
+    bool flg = solution_logic(box);
+    if(!flg) { 
         cout << "Error: No valid pattern possible\n";
         return;
     }
